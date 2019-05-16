@@ -30,7 +30,7 @@ namespace FortuneTeller
             Console.WriteLine("\nGetting closer to your fortune...");
 
 
-            string colorResponse = Console.ReadLine();
+            string colorResponse = "";
             string retireLocation = "";
             do
             {
@@ -67,7 +67,7 @@ namespace FortuneTeller
                 }
                 else if (colorResponse.Equals("help"))
                 {
-                    Console.WriteLine("ROYGBIV Colors are: (R)Red, (Y)Yellow, (O)Orange, (B)Blue, (G)Green, (I)Indigo, and (V)Violet.");
+                    Console.WriteLine("ROYGBIV Colors are: (R)Red, (Y)Yellow, (O)Orange, (B)Blue, (G)Green, (I)Indigo, and (V)Violet.\n");
                 }
                 else
                 {
@@ -75,7 +75,6 @@ namespace FortuneTeller
                 }
 
             } while (colorResponse.Equals("help"));
-                //need a while loop back to original question.
             
 
             Console.WriteLine("\nHow many siblings do you have?");
@@ -98,7 +97,7 @@ namespace FortuneTeller
 
 
             string bankNumber = "";
-            if ((monthValue == 1 || monthValue == 2 || monthValue == 3)) //monthValue >=1 && monthValue <=3   
+            if ((monthValue >= 1 && monthValue <= 3)) //monthValue >=1 && monthValue <=3   
             {
                 bankNumber = ("50,000 dollars");
             }
@@ -149,8 +148,7 @@ namespace FortuneTeller
             }
 
 
-
-
+            
             Console.WriteLine($"{name} {lastName}, you will retire {driveValue} {retireLocation}, with {bankNumber} in your bank account, and a vacation home located {vacationHome}. \nThank you for playing!");
             Console.ReadLine();
         }

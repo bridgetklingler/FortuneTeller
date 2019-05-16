@@ -29,11 +29,54 @@ namespace FortuneTeller
 
             Console.WriteLine("\nGetting closer to your fortune...");
 
-            Console.WriteLine("What is your favorite RYOGBIV color? If unsure type \"Help\".");
+
             string colorResponse = Console.ReadLine();
-            if (colorResponse.ToLower().Equals("help")) {
-                Console.WriteLine("ROYGBIV Colors are: Red, Yellow, Orange, Blue, Green, Indigo, and Violet."); //need a while loop back to original question.
-            }
+            string retireLocation = "";
+            do
+            {
+                Console.WriteLine("What is your favorite ROYGBIV color? If unsure type \"Help\".");
+                colorResponse = Console.ReadLine().ToLower();
+
+                if (colorResponse.Equals("red"))
+                {
+                    retireLocation = ("in Rome, Italy");
+                }
+                else if (colorResponse.Equals("orange"))
+                {
+                    retireLocation = ("in Moscow, Russia");
+                }
+                else if (colorResponse.Equals("yellow"))
+                {
+                    retireLocation = ("in a cave in Arizona");
+                }
+                else if (colorResponse.Equals("green"))
+                {
+                    retireLocation = ("on a personal island in the Carribean (make sure to bring the sunscreen!)");
+                }
+                else if (colorResponse.Equals("blue"))
+                {
+                    retireLocation = ("in a mansion in Greece");
+                }
+                else if (colorResponse.Equals("indigo"))
+                {
+                    retireLocation = ("in a jail in North Korea");
+                }
+                else if (colorResponse.Equals("violet"))
+                {
+                    retireLocation = ("inside the Sydney Opera House in Sydney, Australia");
+                }
+                else if (colorResponse.Equals("help"))
+                {
+                    Console.WriteLine("ROYGBIV Colors are: (R)Red, (Y)Yellow, (O)Orange, (B)Blue, (G)Green, (I)Indigo, and (V)Violet.");
+                }
+                else
+                {
+                    Console.WriteLine("I'm sorry. I don't understand your entery. Please type \"help\".");
+                }
+
+            } while (colorResponse.Equals("help"));
+                //need a while loop back to original question.
+            
 
             Console.WriteLine("\nHow many siblings do you have?");
             string siblings = Console.ReadLine();
@@ -55,7 +98,7 @@ namespace FortuneTeller
 
 
             string bankNumber = "";
-            if ((monthValue == 1 || monthValue == 2 || monthValue == 3))
+            if ((monthValue == 1 || monthValue == 2 || monthValue == 3)) //monthValue >=1 && monthValue <=3   
             {
                 bankNumber = ("50,000 dollars");
             }
@@ -71,42 +114,15 @@ namespace FortuneTeller
             {
                 bankNumber = ("50,000 pesos");
             }
-
-
-
-
-            string retireLocation = "";
-            if (colorResponse.ToLower().Equals("red"))
+            else
             {
-                retireLocation = ("in Rome, Italy");
-            }
-            else if (colorResponse.ToLower().Equals("orange"))
-            {
-                retireLocation = ("in Moscow, Russia");
-            }
-            else if (colorResponse.ToLower().Equals("yellow"))
-            {
-                retireLocation = ("in a cave in Arizona");
-            }
-            else if (colorResponse.ToLower().Equals("green"))
-            {
-                retireLocation = ("on a personal island in the Carribean (make sure to bring the sunscreen!)");
-            }
-            else if (colorResponse.ToLower().Equals("blue"))
-            {
-                retireLocation = ("in a mansion in Greece");
-            }
-            else if (colorResponse.ToLower().Equals("indigo"))
-            {
-                retireLocation = ("in a jail in North Korea");
-            }
-            else if (colorResponse.ToLower().Equals("violet"))
-            {
-                retireLocation = ("inside the Sydney Opera House in Sydney, Australia");
+                bankNumber = ("O");
             }
 
 
-                string vacationHome = "";
+
+
+            string vacationHome = "";
             if (siblingValue == 0)
             {
                 vacationHome = ("a penthouse suite in Paris, France");

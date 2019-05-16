@@ -24,6 +24,9 @@ namespace FortuneTeller
 
             Console.WriteLine($"{name}, please enter your birth month as a number between 1-12");
             string month = Console.ReadLine();
+            int monthValue = Int32.Parse(month);
+            int bankValue = 0;
+
             Console.WriteLine("\nGetting closer to your fortune...");
 
             Console.WriteLine("What is your favorite RYOGBIV color? If unsure type \"Help\".");
@@ -44,10 +47,30 @@ namespace FortuneTeller
             }
             else if (ageValue >= 0 || ageValue < 25)
             {
-                Console.WriteLine("Unicycle");
+                driveValue = ("Unicycle");
             }
             else if (ageValue < 45 || ageValue >= 25) { Console.WriteLine("Private Jet Plane"); }
             else if (ageValue < 72 || ageValue >= 45) { Console.WriteLine("Zip Line"); };
+
+
+            string bankAccount = "";
+            if ((monthValue == 1) && (monthValue == 2) && (monthValue == 3))
+            {
+                bankAccount = ("50,000 dollars");
+            }
+            else if ((monthValue == 4) && (monthValue == 5) && (monthValue ==6))
+            {
+                bankAccount = ("50,000 yen");
+            }
+            else if ((monthValue == 7) && (monthValue == 8) && (monthValue == 9))
+            {
+                bankAccount = ("50,000 bird eggs");
+            }
+            else if ((monthValue == 10) && (monthValue == 11) && (monthValue == 12))
+            {
+                bankAccount = ("50,000 pesos");
+            }
+
 
             string retireLocation = "";
             if (colorResponse.ToLower().Equals("red"))
@@ -72,7 +95,7 @@ namespace FortuneTeller
             }
 
 
-            Console.WriteLine($"{name} {lastName}, You will retire {retireLocation}, driving a {driveValue}, with . \nThank you for playing!");
+            Console.WriteLine($"{name} {lastName}, You will retire {retireLocation}, driving a {driveValue}, with {bankAccount} in your bank account. \nThank you for playing!");
             Console.ReadLine();
         }
     }

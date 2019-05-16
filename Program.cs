@@ -22,7 +22,7 @@ namespace FortuneTeller
             Console.WriteLine($"\n{age} huh? Interesting...");
 
 
-            Console.WriteLine($"\n{name}, please enter your birth month as a number between 1-12");
+            Console.WriteLine($"{name}, please enter your birth month as a number between 1-12");
             string month = Console.ReadLine();
             Console.WriteLine("\nGetting closer to your fortune...");
 
@@ -47,28 +47,29 @@ namespace FortuneTeller
             else if (ageValue < 45 || ageValue >= 25) { Console.WriteLine("Private Jet Plane"); }
             else if (ageValue < 72 || ageValue >= 45) { Console.WriteLine("Zip Line"); };
 
+            string retireLocation = "";
             if (colorResponse.ToLower().Equals("red"))
             {
-                Console.WriteLine("in Rome, Italy!");
+                retireLocation = ("in Rome, Italy!");
             }
             else if (colorResponse.ToLower().Equals("orange"))
             {
-                Console.WriteLine("in Moscow, Russia.");
+                retireLocation = ("in Moscow, Russia.");
             }
             else if (colorResponse.ToLower().Equals("yellow"))
             {
-                Console.WriteLine("in a cave in Arizona.");
+                retireLocation = ("in a cave in Arizona.");
             }
             else if (colorResponse.ToLower().Equals("green"))
             {
-                Console.WriteLine("on a personal island in the Carribean! (Make sure to bring the sunscreen!)");
+                retireLocation = ("on a personal island in the Carribean! (Make sure to bring the sunscreen!)");
             }
             else if (colorResponse.ToLower().Equals("blue"))
             {
-                Console.WriteLine("in a mansion in Greece!");
+                retireLocation = ("in a mansion in Greece!");
             }
 
-            Console.WriteLine($"{name} {lastName}, You will retire {colorResponse}, driving a {ageValue}. \nThank you for playing!");
+            Console.WriteLine($"{name} {lastName}, You will retire {retireLocation}, driving a {ageValue}. \nThank you for playing!");
             Console.ReadLine();
         }
     }

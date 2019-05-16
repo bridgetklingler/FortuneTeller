@@ -36,9 +36,11 @@ namespace FortuneTeller
             string siblingValue = Console.ReadLine();
             Console.WriteLine("\nThank you for answering my questions. Press enter for your fortune!");
 
+
+            string driveValue = "";
             if (ageValue >= 72)
             {
-                Console.WriteLine("Maserati");
+                driveValue = ("Maserati");
             }
             else if (ageValue >= 0 || ageValue < 25)
             {
@@ -69,7 +71,8 @@ namespace FortuneTeller
                 retireLocation = ("in a mansion in Greece!");
             }
 
-            Console.WriteLine($"{name} {lastName}, You will retire {retireLocation}, driving a {ageValue}. \nThank you for playing!");
+
+            Console.WriteLine($"{name} {lastName}, You will retire {retireLocation}, driving a {driveValue}, with . \nThank you for playing!");
             Console.ReadLine();
         }
     }
